@@ -1,0 +1,9 @@
+# .gitignore
+target/
+*.class
+.mvn/
+mvnw
+mvnw.cmd
+.DS_Store
+.env
+.vscode/

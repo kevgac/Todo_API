@@ -1,0 +1,24 @@
+name: CI Java Spring Boot
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - [cite_start]uses: actions/checkout@v4 # Récupère ton code [cite: 44]
+
+      - name: Set up JDK 21
+        [cite_start]uses: actions/setup-java@v4 # Installe Java sur le serveur GitHub [cite: 45]
+        with:
+          java-version: '21'
+          [cite_start]distribution: 'temurin' # Recommandé par notre guide [cite: 46]
+          cache: maven
+
+      - name: Build and Test with Maven
+        [cite_start]run: mvn verify # Lance la compilation et TOUS les tests [cite: 47]
