@@ -1,9 +1,18 @@
-# .gitignore
+# Fichiers de build Maven
 target/
 *.class
+
+# Fichiers système et IDE
+.DS_Store
+.vscode/
+.idea/
+*.iml
+*.log
+
+# Fichiers de configuration sensibles
+.env
+
+# Wrapper Maven (optionnel, souvent ignoré si on utilise mvn installé)
 .mvn/
 mvnw
 mvnw.cmd
-.DS_Store
-.env
-.vscode/
